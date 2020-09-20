@@ -13,10 +13,16 @@
 
 
 #Function to create the instruction in string form
+a=1 #Initialize Global Var a for step counter
 
 def Instruction(n,fr,to):
-    print ('Move disk '+str(n)+ ' from column '+str(fr)+' to '+str(to))
+    global a
+    print ('Step '+str(a)+': Move disk '+str(n)+ ' from column '+str(fr)+' to '+str(to))
+    a+=1
     
+Instruction(5,"A","B")
+Instruction(5,"A","B")
+Instruction(5,"A","B")
 Instruction(5,"A","B")
 
 
@@ -27,6 +33,8 @@ Instruction(5,"A","B")
 
 #Function name is SolveHanoi()
 #It takes in the input of (Number of Disks, Original Position, Auxiliary Position, Target Position)
+
+a=1 #Initialize Global Var a for step counter
 
 def SolveHanoi(n,OG,AX,Tar):
     if n==0:
